@@ -1,0 +1,11 @@
+{
+  "_comment": "Copy to ~/.ductor/agents.json. One entry per sub-agent bot. The main agent is configured via config/config.json, NOT here. Delete this file if you only need a single assistant.",
+  "agents": {
+    "example_worker": {
+      "telegram_token": "0000000000:PUT-SUBAGENT-BOT-TOKEN-HERE",
+      "allowed_user_ids": [111111111],
+      "model": "opus",
+      "role": "One-line description of what this sub-agent specializes in."
+    }
+  }
+}

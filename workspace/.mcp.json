@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "codebase-memory": {
+      "command": "/ductor/opt/cbm/codebase-memory-mcp",
+      "args": [],
+      "env": {}
+    }
+  }
+}

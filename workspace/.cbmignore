@@ -1,0 +1,15 @@
+# Чужой код, который не должен попадать в граф проекта.
+# Синтаксис как у .gitignore.
+
+# Вендоренные зависимости whisper (numpy, ctranslate2, tqdm и прочее) —
+# десятки тысяч узлов чужой библиотеки заглушают наши ~50 скриптов.
+tools/media_tools/_vendor/
+
+# Кэши и артефакты
+.cache/
+**/__pycache__/
+.codebase-memory/
+
+# Синтетические тестовые данные OCR — не код проекта
+output_to_user/ocr_pipeline/samples/
+output_to_user/ocr_pipeline/samples_out/

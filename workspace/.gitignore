@@ -1,0 +1,61 @@
+# ── Secrets (NEVER commit) ────────────────────────────────
+*.env
+.env
+.env.*
+!.env.example
+**/config.json
+!**/config.example.json
+.secrets/
+**/*token*
+**/*secret*
+**/*credential*
+sessions.json
+named_sessions.json
+startup_state.json
+*.pem
+*.key
+id_rsa*
+price_changes.log
+
+# ── Runtime / state (not source) ──────────────────────────
+tasks/
+telegram_files/
+.codebase-memory/
+.cache/
+logs/
+*.log
+backups/
+*.bak
+*.bak-*
+*.pre-*
+_deleted_backup/
+
+# ── Vendored deps & build artefacts ───────────────────────
+**/_vendor/
+**/__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+node_modules/
+dist/
+build/
+
+# ── Models / large binaries ───────────────────────────────
+*.bin
+*.pt
+*.onnx
+*.gguf
+models/
+whisper/
+
+# ── OS / editor ───────────────────────────────────────────
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+
+# ── Cron/bot runtime state (auto-updated) ──────────────────
+cron_tasks/*/state/
+

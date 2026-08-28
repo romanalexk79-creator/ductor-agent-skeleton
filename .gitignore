@@ -1,0 +1,26 @@
+# runtime state (never source)
+sessions.json
+named_sessions.json
+cron_jobs.json
+webhooks.json
+startup_state.json
+bot.pid
+logs/
+*.log
+*.bak
+*.bak-*
+# secrets — only *.template / *.example are tracked
+.env
+.env.*
+!.env.example
+config/config.json
+agents.json
+.secrets/
+*.pem
+*.key
+id_rsa*
+# python / build
+**/__pycache__/
+*.pyc
+.venv/
+node_modules/

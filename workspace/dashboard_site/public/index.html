@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>{{PROJECT_NAME}} Dashboard</title>
+  <meta name="description" content="{{PROJECT_NAME}} analytics dashboard.">
+  <link rel="manifest" href="./manifest.json">
+  <meta name="theme-color" content="#111418">
+  <link rel="icon" href="./static/icon.svg">
+  <link rel="stylesheet" href="./static/style.css">
+  <script>
+    // Restore saved theme early to avoid flash.
+    try {
+      var t = localStorage.getItem("app-theme");
+      if (t) document.documentElement.setAttribute("data-theme", t);
+    } catch (e) {}
+  </script>
+</head>
+<body data-palette="app">
+  <div id="splash" role="status" aria-label="Loading">
+    <div class="spinner"></div>
+    <div class="tag">{{PROJECT_NAME}}</div>
+  </div>
+
+  <main id="app" hidden>
+    <header class="topbar">
+      <h1>{{PROJECT_NAME}}</h1>
+      <span id="period" class="hint"></span>
+    </header>
+    <section id="content"><!-- rendered by app.js --></section>
+  </main>
+
+  <script src="./static/telegram-web-app.js"></script>
+  <script src="./static/demo-data.js"></script>
+  <script src="./static/app.js"></script>
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", function () {
+        navigator.serviceWorker.register("./sw.js").catch(function () {});
+      });
+    }
+  </script>
+</body>
+</html>
