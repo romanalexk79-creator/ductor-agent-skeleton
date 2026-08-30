@@ -1,0 +1,28 @@
+{
+  "_comment": "Copy to config/config.json and fill in real values. config.json is gitignored. This configures the MAIN agent; sub-agents live in agents.json. See config/CLAUDE.md for the full key reference.",
+  "telegram_token": "0000000000:PUT-MAIN-BOT-TOKEN-HERE",
+  "allowed_user_ids": [111111111],
+  "allowed_group_ids": [],
+  "group_mention_only": true,
+  "provider": "claude",
+  "model": "opus",
+  "reasoning_effort": "high",
+  "permission_mode": "bypassPermissions",
+  "user_timezone": "Europe/Berlin",
+  "daily_reset_hour": 4,
+  "language": "en",
+  "api": {
+    "chat_id": 0
+  },
+  "tasks": {
+    "enabled": true
+  },
+  "heartbeat": {
+    "enabled": false,
+    "quiet_start": 22,
+    "quiet_end": 8,
+    "ack_token": "HEARTBEAT_OK"
+  },
+  "file_access": "all",
+  "log_level": "INFO"
+}

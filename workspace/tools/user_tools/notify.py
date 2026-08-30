@@ -33,6 +33,7 @@ from __future__ import annotations
 
 import html
 import json
+import os
 import re
 import sys
 import urllib.error
@@ -41,7 +42,9 @@ import urllib.request
 from pathlib import Path
 
 CONFIG = Path("/ductor/config/config.json")
-DEFAULT_CHAT_ID = 965835789
+# 0 = unset. Provide the primary chat via config.api.chat_id, config
+# allowed_user_ids, or the DUCTOR_CHAT_ID env var. Never hardcode a real id here.
+DEFAULT_CHAT_ID = int(os.environ.get("DUCTOR_CHAT_ID") or 0)
 API = "https://api.telegram.org/bot{token}/sendMessage"
 TG_LIMIT = 4096
 

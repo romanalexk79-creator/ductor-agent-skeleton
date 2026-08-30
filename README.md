@@ -14,7 +14,7 @@ project-skeleton/
 ├─ SHAREDMEMORY.md        # cross-agent shared knowledge (empty template)
 ├─ agents.json.template   # multi-agent registry (fill tokens per agent)
 ├─ config/
-│  ├─ config.json         # runtime config TEMPLATE (put your bot token + ids)
+│  ├─ config.example.json # runtime config TEMPLATE (copy → config.json, add token + ids)
 │  └─ CLAUDE.md           # config-change rules
 └─ workspace/             # the agent working area
    ├─ CLAUDE.md           # main behaviour + messenger rules (generic)
@@ -52,7 +52,9 @@ project-skeleton/
 
 ## Turning this into a new project
 
-1. Copy `config/config.json` → `~/.ductor/config/config.json`, put your
+0. Install dependencies: `pip install -r requirements.txt` (optional extras
+   for media/deploy are listed, commented, inside that file).
+1. Copy `config/config.example.json` → `~/.ductor/config/config.json`, put your
    Telegram bot token and `allowed_user_ids`.
 2. Copy `agents.json.template` → `~/.ductor/agents.json` if you want sub-agents.
 3. Copy `workspace/.env.example` → `~/.ductor/.env`, add your integration keys.

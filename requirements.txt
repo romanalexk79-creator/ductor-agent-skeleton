@@ -1,0 +1,19 @@
+# ductor-agent-skeleton — Python dependencies
+#
+# Core tooling. Most scripts rely only on the Python standard library
+# (urllib, json, sqlite3, hashlib/hmac, subprocess, zoneinfo). The single
+# broadly-used third-party package is PyYAML.
+PyYAML>=6.0
+
+# ---------------------------------------------------------------------------
+# OPTIONAL EXTRAS — install only the features you use. They are imported
+# lazily, so the skeleton runs without them; the matching tool errors clearly
+# if its dependency is missing.
+#
+#   Media transcription / video (tools/media_tools/*):
+# openai>=1.0            # Whisper API transcription, video processing
+# faster-whisper>=1.0    # local (offline) speech-to-text
+#
+#   Deploy over SSH (tools/deploy_tools/*):
+# paramiko>=3.0
+# ---------------------------------------------------------------------------

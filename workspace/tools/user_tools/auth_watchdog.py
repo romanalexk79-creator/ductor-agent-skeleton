@@ -297,7 +297,7 @@ def _selftest() -> list[str]:
     # 1. The exact real-world false positive: user's complaint echoed back
     #    into the log as a Telegram message, at INFO level. Must NOT count.
     user_echo_1 = ("2026-07-23 15:31:16 [INFO] ductor_bot.orchestrator.core:core.py:362: "
-                   "[main:msg:965835789] Message received text=теперь мне присылает "
+                   "[main:msg:111111111] Message received text=please check this"
                    "failed to authenticate. api error: 401 invalid authenticati")
     check("user Message-received text with 401 must not count",
           _AUTH_RE.search(user_echo_1) is not None  # regex does match the text...
@@ -305,8 +305,8 @@ def _selftest() -> list[str]:
 
     # 2. Same complaint, echoed a second time as CLI argv (stream cmd), INFO level.
     user_echo_2 = ("2026-07-23 15:31:16 [INFO] ductor_bot.cli.claude_provider:claude_provider.py:240: "
-                   "[main:msg:965835789:405c9573] CLI stream cmd: docker exec -w /ductor/workspace "
-                   "-- теперь мне присылает Failed to authenticate. API Error: 401 Invalid authenticati")
+                   "[main:msg:111111111:405c9573] CLI stream cmd: docker exec -w /ductor/workspace "
+                   "-- please check thisFailed to authenticate. API Error: 401 Invalid authenticati")
     check("user CLI-argv echo with 401 must not count",
           _AUTH_RE.search(user_echo_2) is not None
           and not _is_real_auth_line(user_echo_2))

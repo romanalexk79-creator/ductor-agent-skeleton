@@ -1,9 +1,4 @@
 {
-  "mcpServers": {
-    "codebase-memory": {
-      "command": "/ductor/opt/cbm/codebase-memory-mcp",
-      "args": [],
-      "env": {}
-    }
-  }
+  "_comment": "Optional MCP servers for the workspace. The skeleton ships with none so a fresh clone starts cleanly. To enable one (e.g. a codebase-memory server), add an entry under mcpServers pointing at your own installed binary. See workspace/docs/OPERATIONS.md.",
+  "mcpServers": {}
 }
